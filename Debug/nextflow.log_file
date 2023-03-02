@@ -1,0 +1,100 @@
+Mar-02 11:14:31.555 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: ProxyConfig[protocol=http; host=prox1; port=3128]
+Mar-02 11:14:31.600 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: ProxyConfig[protocol=https; host=prox1; port=3128]
+Mar-02 11:14:31.601 [main] DEBUG nextflow.cli.Launcher - Setting ftp proxy: ProxyConfig[protocol=ftp; host=prox1; port=3128]
+Mar-02 11:14:31.601 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile sge,apptainer
+Mar-02 11:14:31.695 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.02.1-edge
+Mar-02 11:14:31.749 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/path/.nextflow/plugins; core-plugins: nf-amazon@1.15.0,nf-azure@0.15.1,nf-codecommit@0.1.3,nf-console@1.0.5,nf-ga4gh@1.0.4,nf-google@1.7.0,nf-tower@1.5.10,nf-wave@0.7.2
+Mar-02 11:14:31.776 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-02 11:14:31.779 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-02 11:14:31.784 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Mar-02 11:14:31.802 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-02 11:14:31.862 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /path/test_test/nextflow.config
+Mar-02 11:14:31.864 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /path/test_test/nextflow.config
+Mar-02 11:14:31.903 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `sge,apptainer`
+Mar-02 11:14:33.317 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [sge, mamba, apptainer, conda, docker]
+Mar-02 11:14:33.391 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Mar-02 11:14:33.430 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [backstabbing_lumiere] DSL2 - revision: e65601f95f
+Mar-02 11:14:33.431 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-02 11:14:33.432 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-02 11:14:33.459 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /path/.nextflow/secrets/store.json
+Mar-02 11:14:33.465 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6a1d6ef2] - activable => nextflow.secret.LocalSecretsProvider@6a1d6ef2
+Mar-02 11:14:33.582 [main] DEBUG nextflow.Session - Session UUID: 65930da9-4de7-4e16-bd4e-097a93b871f8
+Mar-02 11:14:33.583 [main] DEBUG nextflow.Session - Run name: backstabbing_lumiere
+Mar-02 11:14:33.584 [main] DEBUG nextflow.Session - Executor pool size: 72
+Mar-02 11:14:33.608 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=216; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Mar-02 11:14:33.819 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.02.1-edge build 5845
+  Created: 26-02-2023 18:43 UTC (10:43 PDT)
+  System: Linux 3.10.0-1160.76.1.el7.x86_64
+  Runtime: Groovy 3.0.15 on OpenJDK 64-Bit Server VM 11.0.13+7-b1751.21
+  Encoding: UTF-8 (UTF-8)
+  Process: 242810@dev1.wynton.ucsf.edu [172.26.44.131]
+  CPUs: 72 - Mem: 376.6 GB (313.6 GB) - Swap: 4 GB (4 GB)
+Mar-02 11:14:33.947 [main] DEBUG nextflow.Session - Work-dir: /path/test_test/work [fhgfs]
+Mar-02 11:14:33.948 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /path/test_test/bin
+Mar-02 11:14:33.980 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-02 11:14:34.006 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-02 11:14:34.036 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-02 11:14:34.074 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 73; maxThreads: 1000
+Mar-02 11:14:34.454 [main] DEBUG nextflow.Session - Session start
+Mar-02 11:14:34.789 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-02 11:14:34.806 [main] INFO  nextflow.Nextflow -    OPTIMIZED PART I WGS - N F   P I P E L I N E
+   ===================================
+
+Start
+
+
+Mar-02 11:14:34.844 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: sge
+Mar-02 11:14:34.844 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'sge'
+Mar-02 11:14:34.866 [main] DEBUG nextflow.executor.Executor - [warm up] executor > sge
+Mar-02 11:14:34.878 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'sge' > capacity: 1000; pollInterval: 5s; dumpInterval: 5m 
+Mar-02 11:14:34.893 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'sge' > queue-stat-interval: 1m
+Mar-02 11:14:35.070 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: test
+Mar-02 11:14:35.071 [main] DEBUG nextflow.Session - Igniting dataflow network (1)
+Mar-02 11:14:35.072 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > test
+Mar-02 11:14:35.074 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Mar-02 11:14:35.074 [main] DEBUG nextflow.Session - Session await
+Mar-02 11:14:35.587 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SGE] submitted process test > jobId: 304831; workDir: /path/test_test/work/80/192e1ffd0733e108bb823742e87479
+Mar-02 11:14:35.590 [Task submitter] INFO  nextflow.Session - [80/192e1f] Submitted process > test
+Mar-02 11:15:04.918 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 304831; id: 1; name: test; status: COMPLETED; exit: 127; error: -; workDir: /path/test_test/work/80/192e1ffd0733e108bb823742e87479 started: 1677784504910; exited: 2023-03-02T19:15:00Z; ]
+Mar-02 11:15:04.931 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=test; work-dir=/path/test_test/work/80/192e1ffd0733e108bb823742e87479
+  error [nextflow.exception.ProcessFailedException]: Process `test` terminated with an error exit status (127)
+Mar-02 11:15:04.956 [Task monitor] INFO  nextflow.processor.TaskProcessor - [80/192e1f] NOTE: Process `test` terminated with an error exit status (127) -- Execution is retried (1)
+Mar-02 11:15:05.267 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SGE] submitted process test > jobId: 304834; workDir: /path/test_test/work/d7/68beb6d10bab5727bc2b6b8cc5667b
+Mar-02 11:15:05.268 [Task submitter] INFO  nextflow.Session - [d7/68beb6] Re-submitted process > test
+Mar-02 11:16:00.025 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 304834; id: 2; name: test; status: COMPLETED; exit: 127; error: -; workDir: /path/test_test/work/d7/68beb6d10bab5727bc2b6b8cc5667b started: 1677784559955; exited: 2023-03-02T19:15:58Z; ]
+Mar-02 11:16:00.026 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=test; work-dir=/path/test_test/work/d7/68beb6d10bab5727bc2b6b8cc5667b
+  error [nextflow.exception.ProcessFailedException]: Process `test` terminated with an error exit status (127)
+Mar-02 11:16:00.150 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'test'
+
+Caused by:
+  Process `test` terminated with an error exit status (127)
+
+Command executed:
+
+  bwa
+  
+  trimmomatic
+
+Command exit status:
+  127
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 2: bwa: command not found
+
+Work dir:
+  /path/test_test/work/d7/68beb6d10bab5727bc2b6b8cc5667b
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Mar-02 11:16:00.264 [main] DEBUG nextflow.Session - Session await > all processes finished
+Mar-02 11:16:00.276 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `test` terminated with an error exit status (127)
+Mar-02 11:16:00.344 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-02 11:16:00.399 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=2; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=1; abortedCount=0; succeedDuration=0ms; failedDuration=72ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Mar-02 11:16:00.481 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Mar-02 11:16:00.514 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+
